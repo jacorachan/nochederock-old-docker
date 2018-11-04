@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    hostname: nochederock_html.local
+    container_name: nochederock_html
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+
+    image: nochederock_html.local
+
+    ports:
+        - 80:80
+
+    volumes:
+      - .:/app
+
